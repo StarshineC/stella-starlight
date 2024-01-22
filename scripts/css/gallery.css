@@ -1,0 +1,133 @@
+
+#volume-selection {
+    border: 1px solid red;
+    width: var(--section-width);
+    margin-inline: auto;
+
+    padding: 25px;
+    background-color: rgba(0, 25, 75, 0.921);
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: auto 300px 225px;
+    grid-template-areas:
+    "summary cover select"
+}
+@media screen and (max-width: 1023px) {
+    #volume-selection {
+        grid-template-columns: auto 300px 75px;
+    }
+}
+@media screen and (max-width: 750px) {
+    #volume-selection {
+        grid-template-columns: auto 75px;
+        grid-template-areas: "summary select";
+    }
+}
+
+#volume-selection-summary {grid-area: summary;}
+#volume-selection-cover {grid-area: cover;}
+#volume-selection-buttons {grid-area: select;}
+
+
+
+#volume-selection-cover {
+    width: 100%;
+}
+@media screen and (max-width: 750px) {
+    #volume-selection-cover {
+        display: none;
+    }
+}
+
+#volume-selection-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#volume-selection-buttons button {
+    width: 100%; /* #volume-selection grid-template-columns */
+    height: 75px;
+
+    border: none;
+    background-color: blue;
+    
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#volume-selection-buttons button p {
+    margin: auto 15px auto 0;
+    display: inline;
+    text-align: right;
+    vertical-align: middle;
+}
+@media screen and (max-width: 1023px) {
+    #volume-selection-buttons button p {
+        display: none;
+    }
+}
+
+
+#volume-selection-buttons button img {
+    width: 75px;
+    height: 75px;
+}
+
+
+
+
+/* -=-=-= Volume Settings =-=-=- */
+
+#volume-settings-main {
+    border: 1px solid blue;
+    width: min(90%, 750px);
+    margin-inline: auto;
+    margin-top: var(--section-margin);
+
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+@media screen and (max-width: 500px) {
+    #volume-settings-main {
+        flex-direction: column;
+    }
+}
+
+#volume-settings-main-format {
+    background-color: aqua;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#volume-settings-main-format button {
+    flex-grow: 1;
+}
+
+#volume-settings-main-chapter {
+    background-color: aquamarine;
+    flex-grow: 1;
+
+    display: flex;
+}
+
+#volume-settings-main-chapter button {
+    flex-grow: 1;
+}
+
+
+
+
+
+/* -=-=-= Page Selection =-=-=- */
+
+#page-selection {
+    border: 1px solid green;
+    width: var(--section-width);
+    margin-inline: auto;
+    margin-top: var(--section-margin);
+}

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
     <title>Stella Starlight</title>
 
     <meta property="og:title" content="Home"/>
@@ -9,29 +12,127 @@
     <meta property="og:image" content="[Le Image]"/>
     <meta property="og:site_name" content="Stella Starlight"/>
 
-
-
-    <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 
-    <!--
-    <link rel="stylesheet" href="scripts/main.css">
-    <script src="scripts/main.js" defer></script>
-    -->
+
+
+    <!-- -=-=-= Page-Specific Content =-=-=- -->
+
+    <link rel="stylesheet" href="scripts\css\main.css">
+    <link rel="stylesheet" href="scripts\css\home.css">
+
+    <script src="scripts/javascript/pathing.js" defer></script>
+    <script src="scripts/javascript/generate-navs.js" defer></script>
+
+
 
 </head>
 
 
-<body>
 
-    <nav></nav>
+<body onload="
+    generateNavs();
+">
 
-    <big-banner>
-        <h1>Stella Starlight</h1>
-        <h2>A Journey of Hopes and Dreams</h2>
-    </big-banner>
 
+
+    <!-- -=-=-= GENERATED =-=-=- -->
+    <!-- -=-=-= Futaba Bar =-=-=- -->
+    <header></header>
+
+
+
+
+    <main>
+        <!-- -=-=-= Title Banner / Hero Banner =-=-=- -->
+        <section id="title-banner"> 
+            <banner-desktop></banner-desktop>
+            <banner-mobile></banner-mobile>
+        </section>
+
+
+
+        <!-- -=-=-= Landing Navigator =-=-=- -->
+        <section id="landing-navigator">
+
+            <!-- Summary -->
+            <article>
+                <div>
+                    <h1>[Header Lol]</h1>
+                    <p>Fallen from the skies of Hallowlight Harbor is little Estellina. With a family of memories altered, a friend wowed by a princess, and all the nightmare-prone children of the night she has to deal with, Stella must find a way to fly back to her home in the sky.</p>
+                </div>
+                <img src="media\images\stickers\stella-welcome.png" alt="Picture of Stella">
+            </article>
+
+            <!-- Quick Read Panel -->
+            <aside>
+                <p>This is where the quick page buttons are. This will be DOM Manipulation.</p>
+            </aside>
+        </section>
+
+
+
+        <!-- -=-=-= Fun Navigator =-=-=- -->
+        <section id="explore-navigator">
+            <h1>Explore!</h1>
+            <div id="explore-1">
+                <img src="media/images/stickers/fun-gallery.png">
+                <h2>Gallery</h2>
+                <p>Classic Webcomicers would call it an</p>
+            </div>
+            <div id="explore-2">
+                <img src="media/images/stickers/fun-gallery.png">
+                <h2>Music</h2>
+                <p>Listen to some tunes I made.</p>
+            </div>
+            <div id="explore-3">
+                <img src="media/images/stickers/fun-gallery.png">
+                <h2>Character Profiles</h2>
+                <p>I want to call it a casting call.</p>
+            </div>
+        </section>
+
+
+
+        <!-- -=-=-= External Sites =-=-=- -->
+        <section id="external-navigator">
+            <h1>Wanna look elsewhere?</h1>
+            <h2 id="external-head-stella">Stella Starlight</h2>
+            <div id="external-links-stella">
+                <button><img src="media/images/icons/tumblr-stella.png"></button>
+                <button><img src="media/images/icons/webtoon-stella.png"></button>
+                <button><img src="media/images/icons/tapas-stella.png"></button>
+            </div>
+            <h2 id="external-head-starshinec">Starshine C.</h2>
+            <div id="external-links-starshinec">
+                <button><img src="media/images/icons/tumblr-starshinec.png"></button>
+                <button><img src="media/images/icons/youtube-starshinec.png"></button>
+            </div>
+        </section>
+
+
+        
+    </main>
+
+
+
+
+    <!-- -=-=-= GENERATED =-=-=- -->
+    <!-- -=-=-= Footer =-=-=- -->
     <footer></footer>
+
+
+
+    <!-- -=-=-= No Script? *Megamind Funny Zoom Pic =-=-=- -->
+    <!-- Yeah this can only rely on CSS -->
+    <noscript>
+        <section>
+            <h1>Please Enable Javascript</h1>
+            <p>Stella Starlight makes heavy use of Javascript, as I really like it. It keeps the nightmares of "too much work" at bay. Turn it on to use Stella Starlight.</p>
+            <div></div>
+        </section>
+    </noscript>
 
 </body>
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+    <title>Gallery - Stella Starlight</title>
+
+    <meta property="og:title" content="Gallery"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="[Stella Starlight URL]"/>
+    <meta property="og:image" content="[Le Image]"/>
+    <meta property="og:site_name" content="Stella Starlight"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+
+
+    <!-- -=-=-= Page-Specific Content =-=-=- -->
+
+    <link rel="stylesheet" href="scripts\css\main.css">
+    <link rel="stylesheet" href="scripts\css\gallery.css">
+
+    <script src="scripts/javascript/pathing.js" defer></script>
+    <script src="scripts/javascript/generate-navs.js" defer></script>
+
+
+
+</head>
+
+
+
+<body onload="
+    generateNavs();
+">
+
+
+
+    <!-- -=-=-= GENERATED =-=-=- -->
+    <!-- -=-=-= Futaba Bar =-=-=- -->
+    <header></header>
+
+
+
+
+    <main>
+        <!-- -=-=-= Title Banner / Hero Banner =-=-=- -->
+        <h1>Gallery</h1>
+
+        <!-- -=-=-= Volume Selection =-=-=- -->
+        <section id="volume-selection">
+            <div id="volume-selection-summary">
+                <h1>Gallery Title Here</h1>
+                <p>Description</p>
+            </div>
+            <img id="volume-selection-cover" src="media/images/banners/cover-1.jpg">
+            <div id="volume-selection-buttons">
+                <button onclick="selectVolume(1);"><img src="media/images/icons/select-1.png"><p>Volume 1</p></button>
+                <button onclick="selectVolume(0);"><img src="media/images/icons/select-extras.png"><p>Extras</p></button>
+            </div>
+        </section>
+
+        <!-- -=-=-= Volume Settings (Main Series) =-=-=- -->
+        <section id="volume-settings-main">
+            <div id="volume-settings-main-format">
+                <button>Pages</button>
+                <button>Strips</button>
+            </div>
+            <div id="volume-settings-main-chapter">
+                <button><</button>
+                <p>1</p>
+                <button>></button>
+            </div>
+        </section>
+
+        <!-- -=-=-= Volume Settings (Extras) =-=-=- -->
+        <section id="volume-settings-extra">
+            <button>All</button>
+            <button>Art</button>
+            <button>Comics</button>
+        </section>
+
+
+
+        <!-- Page Selection -->
+        <section id="page-selection">
+            Nothing of Note
+        </section>
+
+
+    </main>
+
+
+
+    <!-- -=-=-= GENERATED =-=-=- -->
+    <!-- -=-=-= Footer =-=-=- -->
+    <footer></footer>
+
+
+
+    <!-- -=-=-= No Script? *Megamind Funny Zoom Pic =-=-=- -->
+    <!-- Yeah this can only rely on CSS -->
+    <noscript>
+        <section>
+            <h1>Please Enable Javascript</h1>
+            <p>Stella Starlight makes heavy use of Javascript, as I really like it. It keeps the nightmares of "too much work" at bay. Turn it on to use Stella Starlight.</p>
+            <div></div>
+        </section>
+    </noscript>
+
+</body>
+
+
+</html>

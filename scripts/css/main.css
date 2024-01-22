@@ -1,0 +1,279 @@
+
+/* -=-=-= Imports =-=-=- */
+
+/* font-family: 'Single Day', cursive; */
+/* font-family: 'Alata', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Single+Day&display=swap');
+
+
+
+
+/* -=-=-= Universal Stuff =-=-=- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif;
+}
+
+:root {
+    --section-margin: 50px;
+    --section-width: min(1080px, 90%);
+}
+
+p {
+    font-size: 14pt;
+    text-wrap: balance;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    padding-top: 80px;
+    background-image: url("../../media/images/backgrounds/main-1.png");
+    background-size: 150px;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+
+
+
+/* -=-=-= Header / Futaba Bar =-=-=- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.25s;
+}
+
+header article {
+    background-color: brown;
+    border-style: none none solid none;
+    border-color: maroon;
+    border-width: 5px;
+    z-index: 1;
+}
+
+header article section {
+    margin-inline: auto;
+    width: var(--section-width);
+    height: 75px;
+}
+
+header article button {
+    border: none;
+    background: none;
+    font-size: 16pt;
+}
+
+header article button:hover {
+    color: white;
+}
+
+#main-logo {
+    height: inherit;
+}
+#main-logo:hover {
+    cursor: pointer;
+}
+
+
+#nav-desktop {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+@media screen and (max-width: 750px) {
+    #nav-desktop {
+        display: none;
+    }
+}
+
+#nav-desktop nav {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+#nav-desktop #side-buttons {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+
+
+#nav-mobile {
+    display: none;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "logo toggle" "pop pop";
+    gap: 25px 0;
+}
+@media screen and (max-width: 750px) {
+    #nav-mobile {
+        display: grid;
+    }
+}
+
+#nav-mobile #main-logo {grid-area: logo;}
+#nav-mobile button {grid-area: toggle;}
+#nav-mobile #pop-nav {grid-area: pop;}
+
+
+
+#pop-nav {
+    border: solid 5px maroon;
+    background-color: brown;
+    width: min(225px, 100%);
+    margin-left: auto;
+    padding: 25px 15px;
+
+    
+    transform-origin: top right;
+    transform: rotate(90deg) translate(-100px);
+    transition: all 0.25s;
+    z-index: -1;
+}
+
+#pop-nav nav {
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px
+}
+
+
+
+#pop-block {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    background-image: url("../../media/images/backgrounds/toggle-pop.png");
+    background-position: top right;
+    background-size: 200px;
+    border-radius: 0 0 0 100%;
+    opacity: 85%;
+    transition: all 0.5s;
+    z-index: -2;
+}
+@media screen and (max-width: 750px) {
+    #pop-block {
+        display: block;
+    }
+}
+
+#pop-side-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+
+
+
+
+
+/* -=-=-= Footer =-=-=- */
+
+footer {
+    margin-top: var(--section-margin);
+    width: 100%;
+    align-self: center;
+    padding: 50px 0 25px;
+    background-color: brown;
+    border-top: 5px solid maroon;
+}
+
+footer article {
+    width: min(750px, 90%);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "internal external" "copyright copyright";
+    gap: 25px;
+}
+@media screen and (max-width: 500px) {
+    footer article {
+        grid-template-columns: 1fr;
+        grid-template-areas: "internal" "external" "copyright";
+    }
+}
+
+#footer-internal {grid-area: internal;}
+#footer-external {grid-area: external;}
+#footer-copyright {grid-area: copyright;}
+
+
+#footer-internal,
+#footer-external {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer h1 {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+
+footer button {
+    all: unset;
+    display: inline;
+}
+footer button:hover {
+    color: white;
+}
+
+#footer-copyright {
+    text-align: center;
+}
+
+
+
+
+
+/* -=-=-= No Script =-=-=- */
+
+noscript {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+noscript section {
+    background-color: white;
+    width: var(--section-width);
+    margin-inline: auto;
+}
+
+noscript div {
+    width: min(500px, 100%);
+    margin-inline: auto;
+    height: 500px;
+    background-image: url("../../media/images/stickers/no-script.png");
+    background-size: 100%;
+}

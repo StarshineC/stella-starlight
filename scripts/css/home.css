@@ -1,0 +1,176 @@
+
+#title-banner banner-desktop {
+    display: block;
+    height: 30rem;
+    background-image: url(../../media/images/banners/banner-temp-desktop.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+#title-banner banner-mobile {
+    display: none;
+    height: 30rem;
+    background-image: url(../../media/images/banners/banner-temp-mobile.png);
+    background-size: 100%;
+    background-position: center;
+}
+
+@media screen and (max-width: 1023px) {
+    #title-banner banner-desktop {
+        display: none;
+    }
+    #title-banner banner-mobile {
+        display: block;
+    }
+}
+
+
+
+/* -=-=-= Landing Navigator =-=-=- */
+#landing-navigator {
+    width: var(--section-width);
+    margin: var(--section-margin) auto 0;
+
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-areas: "main nav";
+
+    /* -=-=-= Temp =-=-=- */
+    border: 1px solid blue;
+}
+
+#landing-navigator article {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#landing-navigator article div {
+    max-width: 500px;
+    margin: auto 0;
+    background-color: aquamarine;
+}
+
+#landing-navigator article img {
+    justify-self: right;
+    width: 250px;
+}
+
+#landing-navigator aside {
+    background-color: blue;
+    grid-area: nav;
+}
+
+/* Tablet */
+@media screen and (max-width: 1023px) {
+    #landing-navigator img {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+    #landing-navigator {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "nav" "main";
+    }
+}
+
+
+
+/* -=-=-= The Fun Navigator =-=-=- */
+
+#explore-navigator {
+    border: solid 1px green;
+
+    margin: var(--section-margin) auto 0;
+    width: var(--section-width);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "head head head"
+    "explore1 explore2 explore3"
+    ;
+}
+@media screen and (max-width: 500px) {
+    #explore-navigator {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "head" "explore1" "explore2" "explore3";
+    }
+}
+
+#explore-navigator h1 {grid-area: head;}
+#explore-navigator #explore-1 {grid-area: explore1;}
+#explore-navigator #explore-2 {grid-area: explore2;}
+#explore-navigator #explore-3 {grid-area: explore3;}
+
+#explore-navigator h1 {
+    text-align: center;
+}
+
+#explore-navigator h2 {
+    text-align: center;
+}
+
+#explore-navigator img {
+    width: 100%;
+}
+
+
+/* External Navigator */
+
+#external-navigator {
+    border: solid 1px greenyellow;
+
+    padding: 25px;
+    margin: var(--section-margin) auto 0;
+    width: min(90%, 500px);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+    "head head head head head"
+    "location1 location1 location1 location2 location2"
+    "link1 link1 link1 link2 link2";
+    gap: 10px 15px;
+}
+@media screen and (max-width: 500px) {
+    #external-navigator {
+        grid-template-columns: 1fr;
+        grid-template-areas: "head" "location1" "link1" "location2" "link2";
+    }
+}
+
+#external-navigator h1 {grid-area: head;}
+#external-head-stella {grid-area: location1;}
+#external-head-starshinec {grid-area: location2;}
+#external-links-stella {grid-area: link1;}
+#external-links-starshinec {grid-area: link2;}
+
+#external-head-stella,
+#external-head-starshinec {border-bottom: solid 2px;}
+
+#external-links-stella,
+#external-links-starshinec {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+#external-links-stella {grid-template-columns: repeat(3, 1fr);}
+#external-links-starshinec {grid-template-columns: repeat(2, 1fr);}
+
+@media screen and (max-width: 500px) {
+    #external-links-starshinec {grid-template-columns: repeat(3, 1fr);}
+}
+
+#external-navigator h1 {
+    text-align: center;
+}
+
+#external-links-stella button img,
+#external-links-starshinec button img {width: 100%;}
